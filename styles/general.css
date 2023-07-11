@@ -15,6 +15,10 @@ body {
   overflow-x: hidden;
 }
 
+button {
+  cursor: pointer;
+}
+
 a {
   text-decoration: none;
 }
@@ -56,9 +60,11 @@ section {
   z-index: 1;
   margin: 5px;
   padding: 5px 10px;
+  width: 60px;
   border: solid 2px black;
   background: none;
   cursor: pointer;
+  text-align: center;
   font-size: 1em;
   font-weight: 800;
 }
