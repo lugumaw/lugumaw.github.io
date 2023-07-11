@@ -12,7 +12,8 @@
 .art-display {
   border: solid 2px black;
   width: 90%;
-  max-width: 600px;
+  max-width: 500px;
+  height: fit-content;
   transition: 300ms;
   cursor: pointer;
 }
@@ -26,5 +27,13 @@
   width: 100%;
 }
 
-.art-display p {
+.art-display embed {
+  display: block;
+  width: 100%;
+  height: 500px;
+  pointer-events: none;
+}
+
+.art-desc {
+  display: none;
 }
