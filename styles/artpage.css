@@ -1,10 +1,30 @@
-.art-container {
-  padding: 50px;
+.art-display-container {
+  padding: 20px;
   height: fit-content;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
-  gap: 80px;
+  gap: 50px;
+}
+
+.art-display {
+  border: solid 2px black;
+  width: 90%;
+  max-width: 600px;
+  transition: 300ms;
+  cursor: pointer;
+}
+
+.art-display:hover {
+  scale: 1.05;
+}
+
+.art-display img {
+  display: block;
+  width: 100%;
+}
+
+.art-display p {
 }

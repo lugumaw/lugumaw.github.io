@@ -9,75 +9,32 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Luguma</title>
+    <title>jewel</title>
 
     <!-- styling -->
     <link rel="stylesheet" href="styles/general.css" />
     <link rel="stylesheet" href="styles/home.css" />
     <link rel="stylesheet" href="styles/contact.css" />
     <link rel="stylesheet" href="styles/artpage.css" />
-    <link rel="stylesheet" href="styles/artbox.css" />
   </head>
   <body>
-    <button id="return-btn" class="hover-fill" onclick="load(home);">
-      home
-    </button>
     <section id="home" class="active">
       <div id="title-container">
         <h1 id="title" class="fx-ctr">luguma.online</h1>
       </div>
       <div id="navigator">
-        <button id="to-contact" class="hover-fill" onclick="load(contact);">
+        <a id="to-contact" class="hover-fill" href="direct/contact.html">
           contact
-        </button>
+        </a>
         <div id="art-nav">
-          <button onclick="load(art2023)" ;>2023</button>
-          <button onclick="load(art2022)" ;>2022</button>
-          <button onclick="load(art2021)" ;>2021</button>
-          <button onclick="load(art2020)" ;>2020</button>
-          <button onclick="load(art2019)" ;>2019</button>
+          <a href="direct/p2023.html" class="nav-year">2023</a>
+          <a href="direct/p2022.html" class="nav-year">2022</a>
+          <a href="direct/p2021.html" class="nav-year">2021</a>
+          <a href="direct/p2020.html" class="nav-year">2020</a>
+          <a href="direct/p2019.html" class="nav-year">2019</a>
         </div>
       </div>
     </section>
-    <section id="contact">
-      <h1 id="contact-title" class="section-title">contact</h1>
-      <div id="contact-container">
-        <a href="mailto: lugumaw@gmail.com" target="_blank" id="email-link">email</a>
-      </div>
-    </section>
-    <section id="art2023">
-      <h1 class="section-title">2023</h1>
-      <div class="art-container">
-        <div class="sq"></div>
-        <div class="vrec"></div>
-        <div class="hrec"></div>
-        <div class="hrec"></div>
-        <div class="sq"></div>
-        <div class="vrec"></div>
-        <div class="sq"></div>
-        <div class="vrec"></div>
-        <div class="hrec"></div>
-        <div class="hrec"></div>
-        <div class="sq"></div>
-        <div class="vrec"></div>
-        <div class="sq"></div>
-        <div class="vrec"></div>
-        <div class="hrec"></div>
-        <div class="hrec"></div>
-        <div class="sq"></div>
-        <div class="vrec"></div>
-        <div class="sq"></div>
-        <div class="vrec"></div>
-        <div class="hrec"></div>
-        <div class="hrec"></div>
-        <div class="sq"></div>
-        <div class="vrec"></div>
-      </div>
-    </section>
-    <section id="art2022"><h1 class="section-title">2022</h1></section>
-    <section id="art2021"><h1 class="section-title">2021</h1></section>
-    <section id="art2020"><h1 class="section-title">2020</h1></section>
-    <section id="art2019"><h1 class="section-title">2019</h1></section>
 
     <script src="scripting.js"></script>
   </body>

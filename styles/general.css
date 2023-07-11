@@ -15,18 +15,13 @@ body {
   overflow-x: hidden;
 }
 
-section {
-  width: 0;
-  height: 0;
-  visibility: hidden;
-  overflow: hidden;
+a {
+  text-decoration: none;
 }
 
-.active {
+section {
   width: 100%;
   height: 100%;
-  visibility: visible;
-  overflow: visible;
 }
 
 .section-title {
@@ -36,7 +31,7 @@ section {
   padding-top: 10px;
 }
 
-button.hover-fill::after {
+.hover-fill::before {
   content: "";
   display: block;
   position: absolute;
@@ -48,7 +43,7 @@ button.hover-fill::after {
   transition: width 200ms;
 }
 
-button.hover-fill:hover::after {
+.hover-fill:hover::before {
   width: 100%;
 }
 
