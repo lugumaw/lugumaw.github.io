@@ -43,8 +43,10 @@ section {
   transition: width 200ms;
 }
 
-.hover-fill:hover::before {
-  width: 100%;
+@media (any-pointer: fine) {
+  .hover-fill:hover::before {
+    width: 100%;
+  }
 }
 
 #return-btn {

@@ -63,11 +63,12 @@
   background-color: black;
   transition: 200ms;
 }
+@media (any-pointer: fine) {
+  .nav-year:hover {
+    scale: 1.1;
+  }
 
-.nav-year:hover {
-  scale: 1.1;
-}
-
-.nav-year:hover::after {
-  width: 100%;
+  .nav-year:hover::after {
+    width: 100%;
+  }
 }
