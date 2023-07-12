@@ -9,16 +9,25 @@
     <link rel="stylesheet" href="../styles/artpage.css" />
   </head>
   <body>
-    <a id="return-btn" class="hover-fill" href="../index.html"> home </a>
+    <a class="return-btn hover-fill" href="../index.html">home</a>
     <section id="art2021">
       <h1 class="section-title">༢༠༢༡</h1>
       <div class="art-display-container">
+        <div id="popcov">
+          <button class="return-btn hover-fill" onclick="closepopup();">
+            back
+          </button>
+        </div>
         <div class="art-display">
-          <embed src="../art/2021/when i lose my red cheeks (1).pdf" type="">
+          <iframe
+            src="../art/2021/when i lose my red cheeks (1).pdf#scrollbar=0&toolbar=0&statusbar=0&navpanes=0"
+          ></iframe>
           <h2 class="art-title">title</h2>
           <p class="art-desc">asd</p>
         </div>
       </div>
     </section>
+
+    <script src="../scripts/artpage.js"></script>
   </body>
 </html>

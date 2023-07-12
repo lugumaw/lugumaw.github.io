@@ -13,6 +13,32 @@ body {
   margin: 0;
   background-color: white;
   overflow-x: hidden;
+  overflow-y: auto;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* For Firefox */
+::-moz-scrollbar {
+  width: 10px;
+}
+
+::-moz-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-moz-scrollbar-thumb {
+  background: #888;
 }
 
 button {
@@ -45,6 +71,7 @@ section {
   height: 100%;
   background-color: rgba(255, 0, 0, 0.3);
   transition: width 200ms;
+  z-index: -1;
 }
 
 .hover-underline::after {
@@ -69,7 +96,7 @@ section {
   }
 }
 
-#return-btn {
+.return-btn {
   position: absolute;
   top: 0;
   left: 0;
@@ -77,6 +104,7 @@ section {
   margin: 5px;
   padding: 5px 10px;
   width: 60px;
+  height: 32px;
   border: solid 2px black;
   background: none;
   cursor: pointer;

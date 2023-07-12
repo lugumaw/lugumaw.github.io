@@ -10,30 +10,99 @@
 }
 
 .art-display {
-  border: solid 2px black;
   width: 90%;
   max-width: 500px;
   height: fit-content;
   transition: 300ms;
-  cursor: pointer;
-}
-
-.art-display:hover {
-  scale: 1.05;
 }
 
 .art-display img {
   display: block;
   width: 100%;
+  box-shadow: rgb(88, 88, 88) 0 0 15px;
+  transition: 300ms;
+  pointer-events: none;
 }
 
-.art-display embed {
+.art-display iframe {
   display: block;
   width: 100%;
   height: 500px;
   pointer-events: none;
 }
 
+.art-title {
+  margin-top: 10px;
+  text-align: center;
+  pointer-events: none;
+}
+
 .art-desc {
   display: none;
+  padding: 5px 30px;
+}
+
+@media (any-pointer: fine) {
+  .art-display.popup:hover {
+    scale: 1.05;
+    cursor: pointer;
+  }
+
+  .art-display.popup:hover img {
+    box-shadow: rgb(88, 88, 88) 0 0 20px;
+  }
+}
+
+/* POPUPS */
+#popcov {
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  opacity: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(30, 30, 30, 0.95);
+}
+
+#popcov.pop {
+  z-index: 1;
+  display: block;
+  animation: popcov-fade 200ms linear forwards;
+}
+
+@keyframes popcov-fade {
+  0% {
+  }
+  1% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#popcov button {
+  background-color: white; /*rgb(53, 53, 53);*/
+}
+
+.art-display.modal {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  padding: 10%;
+  max-width: 80vw;
+  max-height: 80vh;
+  pointer-events: none;
+  overflow-y: auto;
+  background-color: white;
+}
+
+.art-display.modal .art-desc {
+  display: block;
 }
