@@ -1,8 +1,4 @@
 let popcov = document.getElementById("popcov");
-event_lis = popcov.addEventListener("wheel", (event) => {
-  var deltaY = event.deltaY;
-  active_popup.scrollBy(0, Math.sign(deltaY) * 50);
-});
 var active_ele = null;
 var active_popup = null;
 var event_lis = null;
@@ -34,3 +30,8 @@ Array.from(document.getElementsByClassName("art-display popup")).forEach(
     });
   }
 );
+
+event_lis = popcov.addEventListener("wheel", (event) => {
+  var deltaY = event.deltaY;
+  active_popup.scrollBy(0, Math.sign(deltaY) * 50);
+});
