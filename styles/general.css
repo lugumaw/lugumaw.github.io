@@ -7,8 +7,8 @@
 }
 
 body {
-  width: 100vw;
-  height: 100vh;
+  min-width: 100vw;
+  min-height: 100vh;
   padding: 0;
   margin: 0;
   background-color: white;
@@ -71,7 +71,7 @@ section {
   height: 100%;
   background-color: rgba(255, 0, 0, 0.3);
   transition: width 200ms;
-  z-index: -1;
+  cursor: pointer;
 }
 
 .hover-underline::after {
@@ -81,6 +81,7 @@ section {
   height: 2px;
   background-color: black;
   transition: 200ms;
+  cursor: pointer;
 }
 
 @media (any-pointer: fine) {
@@ -99,7 +100,7 @@ section {
 .return-btn {
   position: absolute;
   top: 0;
-  left: 0;
+  left: 40px;
   z-index: 1;
   margin: 5px;
   padding: 5px 10px;
@@ -107,8 +108,35 @@ section {
   height: 32px;
   border: solid 2px black;
   background: none;
-  cursor: pointer;
   text-align: center;
   font-size: 1em;
   font-weight: 800;
+}
+
+#corner-icon-container {
+  pointer-events: none;
+}
+
+#corner-icon-container img {
+  position: fixed;
+  margin: 4px;
+  width: 30px;
+  height: 30px;
+}
+
+#corner-icon-container img:nth-child(1) {
+  top: 0;
+  left: 0;
+}
+#corner-icon-container img:nth-child(2) {
+  top: 0;
+  right: 0;
+}
+#corner-icon-container img:nth-child(3) {
+  bottom: 0;
+  right: 0;
+}
+#corner-icon-container img:nth-child(4) {
+  bottom: 0;
+  left: 0;
 }
