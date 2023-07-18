@@ -109,7 +109,7 @@
   max-width: 80vw;
   max-height: 80vh;
   pointer-events: none;
-  overflow: auto;
+  overflow-y: scroll;
   background-color: white;
   -webkit-overflow-scrolling: touch;
 }
