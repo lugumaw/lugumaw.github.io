@@ -10,6 +10,7 @@
 }
 
 .art-display {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -104,13 +105,13 @@
   bottom: 0;
   right: 0;
   margin: auto;
-  padding: 10%;
+  padding: 3%;
   max-width: 80vw;
   max-height: 80vh;
   pointer-events: none;
   overflow: auto;
   background-color: white;
-  scroll-behavior: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 @media (orientation: landscape) {
@@ -121,4 +122,9 @@
 
 .art-display.modal .art-desc {
   display: block;
+}
+
+.art-display.modal iframe {
+  pointer-events: all;
+  min-height: 600px;
 }
