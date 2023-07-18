@@ -108,8 +108,9 @@
   max-width: 80vw;
   max-height: 80vh;
   pointer-events: none;
-  overflow-y: auto;
+  overflow: auto;
   background-color: white;
+  scroll-behavior: auto;
 }
 
 @media (orientation: landscape) {
