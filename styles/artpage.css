@@ -10,6 +10,9 @@
 }
 
 .art-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 90%;
   max-width: 500px;
   height: fit-content;
@@ -59,18 +62,16 @@
   position: fixed;
   top: 0;
   left: 0;
-  display: none;
   opacity: 0;
   width: 100vw;
   height: 100vh;
   background-color: rgba(30, 30, 30, 0.95);
-  animation: popcov-fade2 500ms linear forwards;
+  animation: popcov-fade2 300ms linear forwards;
 }
 
 #popcov.pop {
   z-index: 1;
-  display: block;
-  animation: popcov-fade 500ms linear forwards;
+  animation: popcov-fade 300ms linear forwards;
 }
 
 @keyframes popcov-fade {
@@ -109,6 +110,12 @@
   pointer-events: none;
   overflow-y: auto;
   background-color: white;
+}
+
+@media (orientation: landscape) {
+  .art-display.modal img {
+    width: 80%;
+  }
 }
 
 .art-display.modal .art-desc {

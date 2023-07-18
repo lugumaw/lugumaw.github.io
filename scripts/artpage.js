@@ -35,3 +35,11 @@ event_lis = popcov.addEventListener("wheel", (event) => {
   var deltaY = event.deltaY;
   active_popup.scrollBy(0, Math.sign(deltaY) * 50);
 });
+
+// Adjust height for mobile
+const documentHeight = () => {
+  const doc = document.documentElement;
+  doc.style.setProperty("--doc-height", `${window.innerHeight}px`);
+};
+window.addEventListener("resize", documentHeight);
+documentHeight();
