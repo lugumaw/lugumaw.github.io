@@ -16,6 +16,7 @@ body {
   background-color: white;
   overflow-x: hidden;
   overflow-y: auto;
+  scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar {

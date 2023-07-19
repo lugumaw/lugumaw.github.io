@@ -105,9 +105,9 @@
   bottom: 0;
   right: 0;
   margin: auto;
-  padding: 10%;
-  max-width: 80vw;
-  max-height: 80vh;
+  padding: 60px;
+  max-width: 90vw;
+  max-height: 90vh;
   pointer-events: all;
   overflow-y: scroll;
   background-color: white;
@@ -116,7 +116,7 @@
 
 @media (orientation: landscape) {
   .art-display.modal img {
-    width: 70%;
+    width: 50%;
   }
 }
 

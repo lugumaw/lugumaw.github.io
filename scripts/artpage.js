@@ -31,7 +31,7 @@ Array.from(document.getElementsByClassName("art-display popup")).forEach(
 
 event_lis = popcov.addEventListener("wheel", (event) => {
   var deltaY = event.deltaY;
-  active_popup.scrollBy(0, Math.sign(deltaY) * 50);
+  active_popup.scrollBy(0, Math.sign(deltaY) * 10);
 });
 
 // Adjust height for mobile
