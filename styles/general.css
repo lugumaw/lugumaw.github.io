@@ -101,10 +101,10 @@ section {
 }
 
 .return-btn {
+  z-index: 1;
   position: absolute;
   top: 0;
   left: 40px;
-  z-index: 1;
   margin: 5px;
   padding: 5px 10px;
   width: 60px;

@@ -95,6 +95,7 @@
 
 #popcov button {
   background-color: white; /*rgb(53, 53, 53);*/
+  z-index: 5;
 }
 
 .art-display.modal {
