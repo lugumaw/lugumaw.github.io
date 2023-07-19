@@ -16,7 +16,6 @@ body {
   background-color: white;
   overflow-x: hidden;
   overflow-y: auto;
-  scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar {
@@ -103,9 +102,8 @@ section {
 .return-btn {
   z-index: 1;
   position: absolute;
-  top: 0;
+  top: 5px;
   left: 40px;
-  margin: 5px;
   padding: 5px 10px;
   width: 60px;
   height: 32px;

@@ -22,6 +22,7 @@
 
 .art-display img {
   display: block;
+  margin: auto;
   width: 100%;
   box-shadow: rgb(88, 88, 88) 0 0 15px;
   transition: 300ms;
@@ -100,13 +101,17 @@
 
 .art-display.modal {
   z-index: 1;
+  display: block;
   position: fixed;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
-  margin: auto;
+  margin: 0 auto;
+  margin-top: 42px;
   padding: 8%;
+  min-width: 90vw;
+  min-height: 90vh;
   max-width: 90vw;
   max-height: 90vh;
   pointer-events: all;
