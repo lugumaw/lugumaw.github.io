@@ -109,7 +109,9 @@
   right: 0;
   margin: 0 auto;
   margin-top: 42px;
-  padding: 8%;
+  padding: 0 8%;
+  padding-top: 4%;
+  padding-bottom: 10%;
   min-width: 90vw;
   min-height: 90vh;
   max-width: 90vw;
