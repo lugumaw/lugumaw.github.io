@@ -29,6 +29,10 @@
   pointer-events: none;
 }
 
+.art-display img.addon {
+  display: none;
+}
+
 .art-display iframe {
   display: block;
   width: 100%;
@@ -120,6 +124,10 @@
   overflow-y: scroll;
   background-color: white;
   -webkit-overflow-scrolling: touch;
+}
+
+.art-display.modal img.addon {
+  display: block;
 }
 
 @media (orientation: landscape) {
