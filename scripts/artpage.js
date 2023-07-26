@@ -17,7 +17,7 @@ function getTotalHeightOfChildren(parentElement) {
 function openpopup(ele) {
   active_popup = ele.cloneNode(true);
 
-  if (getTotalHeightOfChildren(active_popup) + 30 > active_popup.offsetHeight) {
+  if (getTotalHeightOfChildren(active_popup) > active_popup.offsetHeight) {
     active_popup.style.justifyContent = "start";
   }
 
