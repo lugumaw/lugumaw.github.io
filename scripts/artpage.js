@@ -1,8 +1,19 @@
 let popcov = document.getElementById("popcov");
-var active_ele = null;
 var active_popup = null;
-var event_lis = null;
 
+// Utilities
+function getTotalHeightOfChildren(parentElement) {
+  let totalHeight = 0;
+  const children = parentElement.children;
+  const childrenArray = Array.from(children);
+  childrenArray.forEach((child) => {
+    const childHeight = child.offsetHeight;
+    totalHeight += childHeight;
+  });
+  return totalHeight;
+}
+
+// Popups
 function openpopup(ele) {
   active_popup = ele.cloneNode(true);
   active_popup.classList.add("modal");
@@ -12,6 +23,10 @@ function openpopup(ele) {
   popcov.classList.add("pop");
 
   popcov.appendChild(active_popup);
+
+  if (getTotalHeightOfChildren(active_popup) >= active_popup.offsetHeight) {
+    active_popup.style.justifyContent = "start";
+  }
 }
 
 function closepopup() {
@@ -21,23 +36,26 @@ function closepopup() {
   active_popup = null;
 }
 
-Array.from(document.getElementsByClassName("addon")).forEach(function (ele) {
-  ele.parentNode.style.justifyContent = "start";
-});
-
+// add event listener for click on displays
 Array.from(document.getElementsByClassName("art-display popup")).forEach(
-  function (div) {
-    div.addEventListener("click", (event) => {
+  function (ele) {
+    ele.addEventListener("click", (event) => {
       openpopup(event.target);
     });
   }
 );
 
-event_lis = popcov.addEventListener("wheel", (event) => {
-  var deltaY = event.deltaY;
-  active_popup.scrollBy(0, Math.sign(deltaY) * 10);
-});
+// handle scroll events on popups
+popcov.addEventListener(
+  "wheel",
+  (event) => {
+    var deltaY = event.deltaY;
+    active_popup.scrollBy(0, Math.sign(deltaY) * 10);
+  },
+  { passive: true }
+);
 
+// General
 // Adjust height for mobile
 const documentHeight = () => {
   const doc = document.documentElement;
