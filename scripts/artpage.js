@@ -21,6 +21,10 @@ function closepopup() {
   active_popup = null;
 }
 
+Array.from(document.getElementsByClassName("addon")).forEach(function (ele) {
+  ele.parentNode.style.justifyContent = "start";
+});
+
 Array.from(document.getElementsByClassName("art-display popup")).forEach(
   function (div) {
     div.addEventListener("click", (event) => {
