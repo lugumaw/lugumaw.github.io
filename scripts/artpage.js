@@ -28,12 +28,12 @@ function openpopup(ele) {
   // console.log(active_popup)
   // console.log(active_popup.offsetHeight)
   // console.log(getTotalHeightOfChildren(active_popup))
-  if (
-    getTotalHeightOfChildren(active_popup) >=
-    active_popup.offsetHeight + 20
-  ) {
-    active_popup.style.justifyContent = "start";
-  }
+  // if (
+  //   getTotalHeightOfChildren(active_popup) >=
+  //   active_popup.offsetHeight + 20
+  // ) {
+  //   active_popup.style.justifyContent = "start";
+  // }
 }
 
 function closepopup() {
