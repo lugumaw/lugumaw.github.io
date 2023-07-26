@@ -16,17 +16,18 @@ function getTotalHeightOfChildren(parentElement) {
 // Popups
 function openpopup(ele) {
   active_popup = ele.cloneNode(true);
+
+  if (getTotalHeightOfChildren(active_popup) + 30 > active_popup.offsetHeight) {
+    active_popup.style.justifyContent = "start";
+  }
+
   active_popup.classList.add("modal");
   active_popup.classList.remove("popup");
 
   document.body.style.overflowY = "hidden";
   popcov.classList.add("pop");
 
-  popcov.appendChild(active_popup);
-
-  if (getTotalHeightOfChildren(active_popup) >= active_popup.offsetHeight) {
-    active_popup.style.justifyContent = "start";
-  }
+  popcov.appendChild(active_popup);  
 }
 
 function closepopup() {

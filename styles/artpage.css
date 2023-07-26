@@ -130,12 +130,24 @@
 .art-display.modal img.addon {
   display: block;
   margin-top: 10px;
+  min-width: 100px;
+}
+
+.art-display.modal .addon-flex {
+  width: 90%;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
 }
 
 @media (orientation: landscape) {
   .art-display.modal img {
     width: 80%;
-    max-width: 700px;
+    max-width: 600px;
   }
 }
 
