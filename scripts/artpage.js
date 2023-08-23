@@ -2,14 +2,11 @@ let popcov = document.getElementById("popcov");
 var active_popup = null;
 
 // Utilities
-function getTotalHeightOfChildren(parentElement) {
-  let totalHeight = 0;
+function getNumChildren(parentElement) {
+  let num_children = 0;
   const children = parentElement.children;
   const childrenArray = Array.from(children);
-  childrenArray.forEach((child) => {
-    const childHeight = child.offsetHeight;
-    totalHeight += childHeight;
-  });
+  return childrenArray.length;
   return totalHeight;
 }
 
@@ -25,15 +22,15 @@ function openpopup(ele) {
 
   popcov.appendChild(active_popup);
 
-  // console.log(active_popup)
-  // console.log(active_popup.offsetHeight)
-  // console.log(getTotalHeightOfChildren(active_popup))
-  // if (
-  //   getTotalHeightOfChildren(active_popup) >=
-  //   active_popup.offsetHeight + 20
-  // ) {
-  //   active_popup.style.justifyContent = "start";
-  // }
+  // console.log(active_popup);
+  // console.log(active_popup.offsetHeight);
+  // console.log(getNumChildren(active_popup));
+  if (getNumChildren(active_popup) - 2 >= 2) {
+    active_popup.style.justifyContent = "start";
+    console.log(active_popup.children[0].innerHeight);
+    active_popup.style.setProperty("padding-top", "15vh");
+    active_popup.style.setProperty("padding-bottom", "15vh");
+  }
 }
 
 function closepopup() {

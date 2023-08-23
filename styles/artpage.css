@@ -28,7 +28,6 @@
   pointer-events: none;
 }
 
-
 .art-display img.addon {
   display: none;
 }
@@ -41,8 +40,8 @@
 }
 
 .art-title {
-  margin-top: 10px;
-  margin-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 20px;
   font-size: 1em;
   font-weight: 200;
   text-align: center;
@@ -109,7 +108,7 @@
   z-index: 1;
   display: flex;
   flex-direction: column;
-  justify-content: start;  
+  justify-content: center;
   align-items: center;
   position: fixed;
   top: 0;
@@ -118,19 +117,26 @@
   right: 0;
   margin: auto;
   margin-top: 42px;
-  padding: 3%;
-  width: 90%;
-  height: 90%;
+  width: 100%;
+  height: calc(100% - 84px);
   pointer-events: all;
-  overflow-y: scroll;
-  background-color: white;
+  overflow-y: auto;
   -webkit-overflow-scrolling: touch;
+}
+
+.art-display.modal img {
+  box-shadow: none;
 }
 
 .art-display.modal img.addon {
   display: block;
   margin-top: 10px;
   min-width: 100px;
+}
+
+.art-display.modal .art-title {
+  background-color: white;
+  padding: 0 50px;
 }
 
 .art-display.modal .addon-flex {
@@ -146,11 +152,12 @@
 
 @media (orientation: landscape) {
   .art-display.modal img {
-    width: 80%;
-    max-width: 600px;
+    max-width: 800px;
   }
 }
 
-/* .art-display.modal .art-desc {
-  display: block;
-} */
+@media (orientation: portrait) {
+  .art-display.modal img {
+    width: 90%;
+  }
+}
